@@ -1,0 +1,98 @@
+.main-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5vh;
+  flex-direction: column;
+}
+.main-div > button{
+background: #E4CA56;
+font-size: 60px;
+cursor: pointer;
+margin-top: 40vh;
+border-radius: 5px;
+outline: none;
+font-weight: 700;
+padding: 6px 10px;
+border: none;
+}
+
+.circle-class{
+  text-align: center;
+  color: #DD7F9F;
+}
+.cross-class{
+  text-align: center;
+  color: #3FA7F0;
+}
+.resetBtn{
+  padding: .5rem;
+  border: none !important;
+  outline: none !important;
+  background: rgb(249, 22, 22);
+  border-radius: 40%;
+  width: 80px;
+  height: 50px;
+  font-weight: bolder;
+  color: white;
+  display: block;
+  margin: auto;
+}
+.resetBtn:hover{
+  background: rgb(222, 36, 36);
+  transition: all .5s;
+}
+.game-heading {
+  padding: 5px 20px;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 40px;
+}
+.water-background {
+  background: #48495f;
+}
+
+.move-detection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 400px;
+}
+.left,
+.right {
+  height: 30px;
+  width: 120px;
+  background: red;
+  border-bottom-left-radius: 50px;
+  border-top-right-radius: 50px;
+  padding-top: 7px;
+  text-align: center;
+  background: #48495f;
+
+  font-size: 16px;
+  padding-bottom: 5px;
+}
+.finished-state{
+  font-size: 30px;
+
+  text-align: center;
+}
+
+.waiting{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  font-size: 44px;
+}
+::-webkit-scrollbar{
+  display: none !important;
+}
+
+.current-move-cross{
+  background: #3FA7F0  !important;
+}
+.current-move-circle{
+  background: #DD7F9F !important;
+}

@@ -1,0 +1,31 @@
+.square {
+  background: #48495f;
+  width: 100px;
+  height: 100px;
+  border-radius: 5px;
+}
+.square-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 10px;
+  column-gap: 10px;
+}
+.square-wrapper:hover {
+  cursor: pointer;
+}
+
+.not-allowed {
+  cursor: not-allowed !important;
+}
+
+.circle-one {
+  background: #dd7f9f;
+}
+
+.cross-one{
+  background:rgb(63, 167, 240) ;
+}
+
+.gray-background{
+  background: gray !important;
+}
