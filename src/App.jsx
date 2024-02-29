@@ -72,10 +72,9 @@ const App = () => {
 
   useEffect(() => {
     const winner = checkWinner();
-   
+
     if (winner) {
       setFinishedState(winner);
-     
     }
   }, [gameState]);
 
@@ -111,7 +110,7 @@ const App = () => {
 
   socket?.on("playerMoveFromServer", (data) => {
     const id = data.id;
-   
+
     setGameState((prevState) => {
       const newState = [...prevState];
 
@@ -124,19 +123,18 @@ const App = () => {
     setCurrentPlayer(data.sign === "circle" ? "cross" : "circle");
   });
 
- 
   const handlePlayOnline = async () => {
     const result = await takePlayerName();
     if (result.isDismissed) return;
     const username = result.value;
     setPlayerName(username);
-    const newSocket = io("https://tic-tac-toemultiplayerserver.vercel.app/");
+    // const newSocket = io("http://localhost:3000");
+    const newSocket = io("https://mytictactoeserver.onrender.com");
 
     newSocket.emit("request_to_play", { playerName: username });
     setSocket(newSocket);
   };
 
-  
   if (!playonline) {
     return (
       <div className="main-div">
@@ -171,7 +169,13 @@ const App = () => {
         </div>
       </div>
       <div>
-       
+        <h4
+          className={`${
+            'circle' === playingAs ? "circle-class" : "cross-class"
+          }`}
+        >
+          You are {'circle' === playingAs ? "circle" : "cross"}
+        </h4>
         <h4 className="game-heading water-background">Tic Tac Toe</h4>
         <div className="square-wrapper">
           {gameState.flat(1).map((e, index) => (

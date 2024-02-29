@@ -17,12 +17,13 @@ padding: 6px 10px;
 border: none;
 }
 
-.circle-class{
+.circle-class,.cross-class{
   text-align: center;
   color: #DD7F9F;
+  font-size: 25px;
 }
 .cross-class{
-  text-align: center;
+
   color: #3FA7F0;
 }
 .resetBtn{
