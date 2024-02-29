@@ -130,7 +130,7 @@ const App = () => {
     if (result.isDismissed) return;
     const username = result.value;
     setPlayerName(username);
-    const newSocket = io("http://localhost:3000");
+    const newSocket = io("https://tic-tac-toemultiplayerserver.vercel.app/");
 
     newSocket.emit("request_to_play", { playerName: username });
     setSocket(newSocket);
